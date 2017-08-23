@@ -4,8 +4,9 @@ from __future__ import unicode_literals
 from django.db import models
 
 
-class Grape(models.Model):
+class Alias(models.Model):
     name = models.CharField(max_length=255, unique=True)
+    wine = models.ForeignKey('wines.Wine', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

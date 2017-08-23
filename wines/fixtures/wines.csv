@@ -1,0 +1,56 @@
+Name,Style,Type,Origin,Fruit,Body,Sweetness,Acidity,Alcohol,Tannin,Grapes,Alias
+Cava,Sparkling Wine,Name,Spain,3,1,2,4,2,0,"Macabeo,Xarello,Parellada",
+Champagne,Sparkling Wine,Region,"Champagne, France",2,1,1,5,2,0,"Pinot Noir,Pinot Menier,Chardonnay",
+Lambrusco,Sparkling Wine,Grape,Northern Italy,4,2,3,5,1,0,Lambrusco,
+Prosecco,Sparkling Wine,Grape,Northern Italy,4,1,2,4,3,0,Prosecco,
+Albarino,Light-Bodied White Wine,Grape,Northern Portugal,4,1,2,5,3,0,Albarino,Alvarinho
+Gruner Veltliner,Light-Bodied White Wine,Grape,Austria,4,2,2,4,3,0,Gruner Veltliner,
+Muscadet,Light-Bodied White Wine,Grape,"Loire, France",1,1,1,5,2,0,Muscadet,Melon de Bourgogne
+Pinot Gris,Light-Bodied White Wine,Grape,France and Italy,2,2,2,3,3,0,Pinot Gris,"Pinot Grigio,Grauburgunder"
+Sauvignon Blanc,Light-Bodied White Wine,Grape,France and Italy,5,1,2,5,3,0,Sauvignon Blanc,Fume Blanc
+Soave,Light-Bodied White Wine,Grape,"Veneto, Italy",2,1,1,5,3,0,Soave,Garganega
+Vermentino,Light-Bodied White Wine,Grape,Italy,3,1,2,4,3,0,Vermentino,"Rolle,Favorita,Pigato"
+Chardonnay,Full-Bodied White Wine,Grape,France,4,4,2,3,4,0,Chardonnay,
+Marsanne Blend,Full-Bodied White Wine,Grape,"Rhone Valley, France",3,2,2,2,4,0,Marsanne,"Chateauneuf-du-Pape Blanc,Cotes du Rhone Blanc"
+Semillon,Full-Bodied White Wine,Grape,France,3,3,2,3,3,0,Semillon,
+Viognier,Full-Bodied White Wine,Grape,Southern France,5,3,3,2,4,0,Viognier,
+Chenin Blanc,Aromatic White Wine,Grape,France,3,1,3,5,3,0,Chenin Blanc,"Steen,Pineau,Vouvray"
+Gewurztraminer,Aromatic White Wine,Grape,"France, Germany",5,3,3,1,4,0,Gewurztraminer,
+Muscat Blanc,Aromatic White Wine,Grape,"France, Greece",5,1,4,4,1,0,Muscat Blanc,"Moscato d'Asti,Moscatel,Muscat Canelli,Muskateller"
+Riesling,Aromatic White Wine,Grape,Germany,5,1,3,5,1,0,Riesling,
+Torrontes,Aromatic White Wine,Grape,Argentina,5,2,2,3,3,0,Torrontes,
+Rose,Rose,Name,Unknown,5,3,2,3,3,0,"Grenache,Syrah,White Zinfandel,Tempranillo,Garnacha","Rosado,Rosato,Vin Gris"
+Gamay,Light-Bodied Red Wine,Grape,France,3,2,0,4,2,1,Gamay,"Beaujolais,Gamay Noir"
+Pinot Noir,Light-Bodied Red Wine,Grape,France,4,3,0,4,3,2,Pinot Noir,Spatburgunder
+Barbera,Medium-Bodied Red Wine,Grape,Italy,4,4,0,4,4,1,Barbera,
+Cabernet Franc,Medium-Bodied Red Wine,Grape,France,3,3,0,4,3,4,Cabernet Franc,"Chinon,Bourgueil,Bouchet,Breton"
+Carignan,Medium-Bodied Red Wine,Grape,Spain,5,3,0,4,4,3,Carignan,"Mazuelo,Carinena,Carignano"
+Carmenere,Medium-Bodied Red Wine,Grape,France,4,3,0,3,3,3,Carmenere,
+Grenache,Medium-Bodied Red Wine,Grape,Spain,5,4,0,3,4,3,Grenache,Garnacha
+Mencia,Medium-Bodied Red Wine,Grape,Spain,3,4,0,5,4,4,Mencia,"Jaen,Bierzo,Ribeira Sacra"
+Merlot,Medium-Bodied Red Wine,Grape,France,4,4,0,3,4,4,Merlot,
+Montepulciano,Medium-Bodied Red Wine,Grape,Southern Italy,3,4,0,4,3,4,Montepulciano,
+Negroamaro,Medium-Bodied Red Wine,Grape,"Puglia, Italy",5,4,0,3,4,4,Negroamaro,
+Rhone/GSM Blend,Medium-Bodied Red Wine,Region,France,5,4,0,4,4,4,"Grenache,Syrah,Mourvedre,Cinsaut,Carignan","Grenache-Syrah-Mourvedre,Cotes du Rhone"
+Sangiovese,Medium-Bodied Red Wine,Grape,Italy,2,3,0,5,4,4,Sangiovese,"Chianti,Brunello,Nielluccio,Morellino"
+Valpolicella Blend,Medium-Bodied Red Wine,Region,"Veneto, Italy",3,3,0,5,3,2,"Corvina,Rondinella,Corvinone,Molinara",Amarone
+Zinfandel,Medium-Bodied Red Wine,Grape,Croatia,5,5,0,2,5,3,Zinfandel,"Primitivo,Tribidrag"
+Aglianico,Full-Bodied Red Wine,Grape,Southern Italy,2,5,0,5,4,5,Aglianico,Taurasi
+Bordeaux Blend,Full-Bodied Red Wine,Region,France,4,5,0,3,4,5,"Cabernet Sauvignon,Merlot,Cabernet Franc,Petit Verdot,Malbec,Carmenere","Meritage,Cabernet-Merlot"
+Cabernet Sauvignon,Full-Bodied Red Wine,Grape,France,4,5,0,3,4,4,Cabernet Sauvignon,
+Malbec,Full-Bodied Red Wine,Grape,South West France,5,4,0,3,4,3,Malbec,Cot
+Mourvedre,Full-Bodied Red Wine,Grape,Spain,4,5,0,4,4,5,Mourvedre,"Monastrell,Mataro"
+Nebbiolo,Full-Bodied Red Wine,Grape,Northern Italy,3,4,0,5,4,5,Nebbiolo,"Barolo,Barbaresco,Spanna,Chiavennasca"
+Nero d'Avola,Full-Bodied Red Wine,Grape,"Sicily, Italy",5,5,0,4,4,4,Nero d'Avola,Calabrese
+Petit Verdot,Full-Bodied Red Wine,Grape,France,4,5,0,4,4,5,Petit Verdot,
+Petie Sirah,Full-Bodied Red Wine,Grape,France,5,5,0,3,5,5,Petite Sirah,"Durif,Petite Syrah"
+Pinotage,Full-Bodied Red Wine,Grape,South Africa,4,5,0,2,5,4,Pinotage,
+Syrah,Full-Bodied Red Wine,Grape,France,5,5,0,4,4,3,Syrah,Shiraz
+Tempranillo,Full-Bodied Red Wine,Grape,Spain,2,4,0,4,4,5,Tempranillo,"Cencibel,Tinta Roriz,Tinta de Toro,Rioja,Ribera del Duero"
+Touriga Nacional,Full-Bodied Red Wine,Touriga Nacional,Portugal,5,5,0,4,5,5,Touriga Nacional,
+Madeira,Dessert Wine,Grape,"Medeira Island, Portugal",3,5,4,4,5,0,Madeira,
+Marsala,Dessert Wine,Grape,Italy,3,5,4,3,5,0,Marsala,
+Port,Dessert Wine,Grape,Portugal,5,5,0,3,5,5,Port,
+Sauternais,Dessert Wine,Grape,France,5,2,5,5,3,0,Sauternais,
+Sherry,Dessert Wine,Name,Spain,2,3,3,4,5,0,"Palomino Fino,Pedro Ximenez,Moscatel",
+Vin Santo,Dessert Wine,Grape,Italy,3,5,5,4,5,0,Vin Santo,

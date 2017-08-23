@@ -3,10 +3,10 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 
-from grapes.models import Grape
+from aliases.models import Alias
 
 
-class GrapeAdmin(admin.ModelAdmin):
+class AliasAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(Grape, GrapeAdmin)
+admin.site.register(Alias, AliasAdmin)
