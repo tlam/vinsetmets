@@ -13,7 +13,7 @@ class Command(BaseCommand):
         csv_file = 'wines/fixtures/wines.csv'
         with open(csv_file, 'rb') as csvfile:
             reader = csv.reader(csvfile)
-            next(reader, None)  # Skip header
+            next(reader)  # Skip header
             for row in reader:
                 style, created = Style.objects.get_or_create(
                     name=row[1])
