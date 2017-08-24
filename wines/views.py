@@ -11,7 +11,6 @@ def index(request):
     wines = []
     form = WineForm(request.GET)
     if form.is_valid():
-        print 'It is'
         fields = {}
 
         for field in ['style', 'fruit', 'sweetness', 'tannin', 'body', 'acidity', 'alcohol']:
