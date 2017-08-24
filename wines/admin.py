@@ -14,6 +14,7 @@ class AliasInline(admin.TabularInline):
 
 class StyleAdmin(admin.ModelAdmin):
     model = Style
+    list_display = ['name', 'order']
 
 
 class WineAdmin(admin.ModelAdmin):

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>Wines</h3>
+
+<form action="" method="get">
+  {{ form.as_p }}
+  <input type="submit" class="btn btn-default" value="Filter" />
+  <a href="{% url 'wines:index' %}">Reset</a>
+</form>
+
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Style</th>
+    <th>Label</th>
+    <th>Origin</th>
+    <th>Fruit</th>
+    <th>Sweetness</th>
+    <th>Tannin</th>
+    <th>Body</th>
+    <th>Acidity</th>
+    <th>Alcohol</th>
+    <th>Grapes</th>
+  </tr>
+{% for wine in wines %}
+  <tr>
+    <td>{{ wine.name }}</td>
+    <td>{{ wine.style }}</td>
+    <td>{{ wine.label }}</td>
+    <td>{{ wine.origin }}</td>
+    <td>{{ wine.fruit }}</td>
+    <td>{{ wine.get_sweetness_display }}</td>
+    <td>{{ wine.get_tannin_display }}</td>
+    <td>{{ wine.get_body_display }}</td>
+    <td>{{ wine.get_acidity_display }}</td>
+    <td>{{ wine.get_alcohol_display }}</td>
+    <td>
+    {% for grape in wine.grapes.all %}
+      {{ grape.name }}{% if not forloop.last %},{% endif %}
+    {% endfor %}
+    </td>
+  </tr>
+{% endfor %}
+</table>
+{% endblock %}
