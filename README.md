@@ -14,5 +14,4 @@ Given a type of wine, narrow down a selection based on:
 
 ## TODO
 
-- LCBO search
 - Food pairing

@@ -25,7 +25,14 @@
   </tr>
 {% for wine in wines %}
   <tr>
-    <td>{{ wine.name }}</td>
+    <td>
+      {{ wine.name }}
+      <a class="glyphicon glyphicon-glass"
+         aria-hidden="true"
+         target="_blank"
+         href="//www.lcbo.com/lcbo/search?searchTerm={{ wine.name }}">
+      </a>
+    </td>
     <td>{{ wine.style }}</td>
     <td>{{ wine.label }}</td>
     <td>{{ wine.origin }}</td>
