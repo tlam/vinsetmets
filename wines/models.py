@@ -78,6 +78,7 @@ class Wine(models.Model):
     body = models.PositiveIntegerField(default=0, choices=BODY_CHOICES)
     acidity = models.PositiveIntegerField(default=0, choices=ACIDITY_CHOICES)
     alcohol = models.PositiveIntegerField(default=0, choices=ALCOHOL_CHOICES)
+    grows_best = models.ManyToManyField('locations.Location')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

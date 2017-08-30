@@ -19,7 +19,7 @@ class StyleAdmin(admin.ModelAdmin):
 
 class WineAdmin(admin.ModelAdmin):
     model = Wine
-    filter_horizontal = ('grapes',)
+    filter_horizontal = ('grapes', 'grows_best',)
     inlines = [
         AliasInline
     ]

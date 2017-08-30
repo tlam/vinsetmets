@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'vinsetmets',
     'grapes',
+    'locations',
     'wines',
     'aliases',
 ]

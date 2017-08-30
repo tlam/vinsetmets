@@ -3,13 +3,72 @@
 {% block content %}
 <h3>Wines</h3>
 
-<form action="" method="get">
-  {{ form.as_p }}
-  <input type="submit" class="btn btn-default" value="Filter" />
-  <a href="{% url 'wines:index' %}">Reset</a>
+<form action="" method="get" class="filter form-horizontal">
+  {{ form.non_field_errors }}
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        {{ form.style.errors }}
+        <label for="{{ form.style.id_for_label }}" class="col-sm-2 control-label">Style</label>
+        <div class="col-sm-5">
+          {{ form.style }}
+        </div>
+      </div>
+      <div class="form-group">
+        {{ form.fruit.errors }}
+        <label for="{{ form.fruit.id_for_label }}" class="col-sm-2 control-label">Fruit</label>
+        <div class="col-sm-5">
+          {{ form.fruit }}
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <input type="submit" class="btn btn-default" value="Filter" />
+          <a href="{% url 'wines:index' %}">Reset</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        {{ form.sweetness.errors }}
+        <label for="{{ form.sweetness.id_for_label }}" class="col-sm-2 control-label">Sweetness</label>
+        <div class="col-sm-5">
+          {{ form.sweetness }}
+        </div>
+      </div>
+      <div class="form-group">
+        {{ form.tannin.errors }}
+        <label for="{{ form.tannin.id_for_label }}" class="col-sm-2 control-label">Tannin</label>
+        <div class="col-sm-5">
+          {{ form.tannin }}
+        </div>
+      </div>
+      <div class="form-group">
+        {{ form.body.errors }}
+        <label for="{{ form.body.id_for_label }}" class="col-sm-2 control-label">Body</label>
+        <div class="col-sm-5">
+          {{ form.body }}
+        </div>
+      </div>
+      <div class="form-group">
+        {{ form.acidity.errors }}
+        <label for="{{ form.acidity.id_for_label }}" class="col-sm-2 control-label">Acidity</label>
+        <div class="col-sm-5">
+          {{ form.acidity }}
+        </div>
+      </div>
+      <div class="form-group">
+        {{ form.alcohol.errors }}
+        <label for="{{ form.alcohol.id_for_label }}" class="col-sm-2 control-label">Alcohol</label>
+        <div class="col-sm-5">
+          {{ form.alcohol }}
+        </div>
+      </div>
+    </div>
+  </div>
 </form>
 
-<table class="table table-striped">
+<table class="table table-striped table-condensed">
   <tr>
     <th>Name</th>
     <th>Style</th>
@@ -22,6 +81,8 @@
     <th>Acidity</th>
     <th>Alcohol</th>
     <th>Grapes</th>
+    <th>Aliases</th>
+    <th>Grows Best</th>
   </tr>
 {% for wine in wines %}
   <tr>
@@ -45,6 +106,16 @@
     <td>
     {% for grape in wine.grapes.all %}
       {{ grape.name }}{% if not forloop.last %},{% endif %}
+    {% endfor %}
+    </td>
+    <td>
+    {% for alias in wine.alias_set.all %}
+      {{ alias.name }}{% if not forloop.last %},{% endif %}
+    {% endfor %}
+    </td>
+    <td>
+    {% for location in wine.grows_best.all %}
+      {{ location }}{% if not forloop.last %},{% endif %}
     {% endfor %}
     </td>
   </tr>

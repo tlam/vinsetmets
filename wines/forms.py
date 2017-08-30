@@ -19,3 +19,4 @@ class WineForm(forms.ModelForm):
         super(WineForm, self).__init__(*args, **kwargs)
         for key in self.fields:
             self.fields[key].required = False
+            self.fields[key].widget.attrs['class'] = 'form-control'
