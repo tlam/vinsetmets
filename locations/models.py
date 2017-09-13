@@ -11,6 +11,7 @@ class Location(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
+        ordering = ['region', 'country']
         unique_together = (('region', 'country'),)
 
     def __str__(self):
