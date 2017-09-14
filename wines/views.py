@@ -13,7 +13,7 @@ def index(request):
     if form.is_valid():
         fields = {}
 
-        for field in ['style', 'fruit', 'sweetness', 'tannin', 'body', 'acidity', 'alcohol']:
+        for field in ['style', 'colour', 'fruit', 'sweetness', 'tannin', 'body', 'acidity', 'alcohol']:
             value = form.cleaned_data[field]
             if value:
                 fields[field] = value

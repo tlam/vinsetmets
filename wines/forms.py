@@ -8,6 +8,7 @@ class WineForm(forms.ModelForm):
         model = Wine
         fields = [
             'style',
+            'colour',
             'fruit',
             'sweetness',
             'tannin',
