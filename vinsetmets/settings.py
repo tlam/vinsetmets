@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'locations',
     'wines',
     'aliases',
+    'products',
 ]
 
 MIDDLEWARE = [
@@ -123,6 +124,8 @@ USE_TZ = True
 
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
+
+LCBO_API_KEY = ''
 
 try:
     from dev_settings import *
