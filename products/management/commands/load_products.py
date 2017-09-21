@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
 import pprint
 
 from django.conf import settings
@@ -27,13 +30,13 @@ class Command(BaseCommand):
 
             output = response.json()
             pager = output['pager']
-            print 'Page {} / {}'.format(pager['current_page'], pager['total_pages'])
+            print('Page {} / {}'.format(pager['current_page'], pager['total_pages']))
             for product in output['result']:
-                #pprint.pprint(product)
+                # pprint.pprint(product)
                 obj, created = Product.objects.update_or_create(
                     id=product['id'],
                     defaults={
-                        'name': product['name'],
+                        'name': product['name'].encode('utf-8'),
                         'origin': product['origin'],
                         'description': product['description'] or '',
                         'price': product['price_in_cents'] * 0.01,
@@ -64,7 +67,7 @@ class Command(BaseCommand):
                         'limited_time_offer_ends': product['limited_time_offer_ends_on'] or '',
                         'limited_time_offer_savings': product['limited_time_offer_savings_in_cents'] * 0.01,
                         'released_on': product['released_on'] or '',
-                        'tags': product['tags'],
+                        'tags': product['tags'].encode('utf-8'),
                         'total_package_units': product['total_package_units'],
                         'volume': product['volume_in_milliliters']
                     }
