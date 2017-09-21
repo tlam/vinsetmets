@@ -7,6 +7,20 @@ from products.models import Product
 
 
 class ProductAdmin(admin.ModelAdmin):
-    pass
+    list_display = (
+        'name',
+        'origin',
+        'price',
+        'inventory',
+        'primary_category',
+        'secondary_category',
+        'style',
+        'varietal',
+    )
+    list_filter = (
+        'primary_category',
+        'secondary_category',
+    )
+    search_fields = ['name']
 
 admin.site.register(Product, ProductAdmin)

@@ -20,7 +20,7 @@ class Command(BaseCommand):
         payload = {
             'page': 1,
             'per_page': 100,
-            'where_not': 'is_dead,is_discontinued'
+            'where_not': 'is_dead,is_discontinued',
         }
 
         while True:
@@ -32,6 +32,8 @@ class Command(BaseCommand):
             pager = output['pager']
             print('Page {} / {}'.format(pager['current_page'], pager['total_pages']))
             for product in output['result']:
+                if product['alcohol_content'] == 0:
+                    continue
                 # pprint.pprint(product)
                 obj, created = Product.objects.update_or_create(
                     id=product['id'],
