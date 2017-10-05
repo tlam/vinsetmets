@@ -20,6 +20,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_filter = (
         'primary_category',
         'secondary_category',
+        'is_ocb',
     )
     search_fields = ['name']
 
