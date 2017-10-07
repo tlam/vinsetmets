@@ -22,6 +22,6 @@ class BoozeAdmin(admin.ModelAdmin):
         'secondary_category',
         'is_ocb',
     )
-    search_fields = ['name']
+    search_fields = ['name', 'product_id']
 
 admin.site.register(Booze, BoozeAdmin)
