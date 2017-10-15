@@ -34,7 +34,7 @@ class Product(models.Model):
     inventory_price = models.DecimalField(max_digits=12, decimal_places=2)
     inventory_volume = models.PositiveIntegerField(default=0)  # ml
     limited_time_offer_ends = models.CharField(max_length=255, blank=True, default='')
-    limited_time_offer_savings = models.DecimalField(max_digits=12, decimal_places=2)
+    limited_time_offer_savings = models.DecimalField(max_digits=12, decimal_places=2, verbose_name='savings')
     released_on = models.CharField(max_length=255, blank=True, default='')
     tags = models.TextField(blank=True, default='')
     total_package_units = models.PositiveSmallIntegerField()

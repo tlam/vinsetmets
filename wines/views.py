@@ -25,5 +25,5 @@ def index(request):
     }
     return render(
         request,
-        'index.html',
+        'wines/index.html',
         context)

@@ -11,15 +11,16 @@ class ProductAdmin(admin.ModelAdmin):
         'name',
         'origin',
         'price',
+        'limited_time_offer_savings',
         'inventory',
         'primary_category',
-        'secondary_category',
         'style',
         'varietal',
     )
     list_filter = (
         'primary_category',
         'secondary_category',
+        'has_limited_time_offer',
         'is_ocb',
     )
     search_fields = ['name']

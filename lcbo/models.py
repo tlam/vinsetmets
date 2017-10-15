@@ -32,7 +32,7 @@ class Booze(models.Model):
     inventory_price = models.DecimalField(max_digits=12, decimal_places=2)
     inventory_volume = models.PositiveIntegerField(default=0)  # ml
     limited_time_offer_ends = models.CharField(max_length=255, blank=True, default='')
-    limited_time_offer_savings = models.DecimalField(max_digits=12, decimal_places=2)
+    limited_time_offer_savings = models.DecimalField(max_digits=12, decimal_places=2, verbose_name='Savings')
     released_on = models.CharField(max_length=255, blank=True, default='')
     total_package_units = models.PositiveSmallIntegerField()
     volume = models.PositiveIntegerField(default=0)  # ml
@@ -40,6 +40,7 @@ class Booze(models.Model):
     class Meta:
         db_table = 'booze'
         managed = False
+        ordering = ['product_id', 'added_on']
 
     def __str__(self):
         return self.name

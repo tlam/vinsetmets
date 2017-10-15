@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+from datetime import datetime
 
 from django.contrib import admin
 
@@ -12,10 +13,11 @@ class BoozeAdmin(admin.ModelAdmin):
         'product_id',
         'origin',
         'price',
+        'limited_time_offer_savings',
         'inventory',
         'primary_category',
         'secondary_category',
-        'added_on',
+        'added_on_format',
     )
     list_filter = (
         'primary_category',
@@ -23,5 +25,8 @@ class BoozeAdmin(admin.ModelAdmin):
         'is_ocb',
     )
     search_fields = ['name', 'product_id']
+
+    def added_on_format(self, obj):
+        return obj.added_on.strftime('%b %d, %Y')
 
 admin.site.register(Booze, BoozeAdmin)
