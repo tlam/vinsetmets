@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.urls import reverse
+from django.utils.html import mark_safe
 
 from lcbo.models import Booze
 
@@ -53,3 +54,7 @@ class Product(models.Model):
 
     def history(self):
         return Booze.objects.filter(product_id=self.id)
+
+    def inventory_link(self):
+        return mark_safe('<a href="{}" target="blank">{}</a>'.format(
+            self.get_absolute_url(), self.inventory))

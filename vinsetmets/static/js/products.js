@@ -16,6 +16,14 @@ function drawInventory() {
       height: 450,
       hAxis: {
         format: 'EEE, MMM d'
+      },
+      vAxes: {
+        0: {minValue: 0},
+        1: {minValue: 0, maxValue: 80}
+      },
+      series: {
+        0: {targetAxisIndex: 0},
+        1: {targetAxisIndex: 1}
       }
     };
     var chart = new google.visualization.LineChart(document.getElementById('chart-output'));

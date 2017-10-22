@@ -12,7 +12,7 @@ class ProductAdmin(admin.ModelAdmin):
         'origin',
         'price',
         'limited_time_offer_savings',
-        'inventory',
+        'inventory_link',
         'primary_category',
         'style',
         'varietal',

@@ -1,14 +1,27 @@
 {% extends "base.html" %}
 
+{% block page_title %}- {{ product.name }}{% endblock %}
+{% block current_crumb %}
+<li><a href="{% url 'products:index' %}">Products</a></li>
+<li class="active">{{ product.name }}</li>
+{% endblock %}
+
 {% block content %}
 
 <h2>{{ product.name }}</h2>
+<span class="label label-primary">{{ product.primary_category }}</span>
+<span class="label label-info">{{ product.secondary_category }}</span>
+<span class="label label-default">{{ product.tertiary_category }}</span>
+
+<div>
+  <label>Style:</label> {{ product.style }}
+</div>
 <div>
   <label>Origin:</label> {{ product.origin }}
 </div>
 <div>
   <label>Price:</label> {{ product.price }}
-  {% if product.savings %}(Savings {{ product.savings }}){% endif %}
+  {% if product.has_limited_time_offer %}(Savings {{ product.limited_time_offer_savings }}){% endif %}
 </div>
 <div>
   <label>Inventory:</label> {{ product.inventory }}
