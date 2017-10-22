@@ -7,5 +7,11 @@
   </head>
   <body>
     {% block content %}{% endblock %}
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages: ['corechart']});
+    </script>
+    <script type="text/javascript" src="{% static 'js/products.js' %}"></script>
   </body>
 </html>

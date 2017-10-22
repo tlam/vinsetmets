@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>{{ product.name }}</h2>
+<div>
+  <label>Origin:</label> {{ product.origin }}
+</div>
+<div>
+  <label>Price:</label> {{ product.price }}
+  {% if product.savings %}(Savings {{ product.savings }}){% endif %}
+</div>
+<div>
+  <label>Inventory:</label> {{ product.inventory }}
+</div>
+
+<div id="chart-output"></div>
+
+<input type="hidden" id="product-id" value="{{ product.id }}" />
+{% endblock %}

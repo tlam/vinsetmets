@@ -2,6 +2,9 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.urls import reverse
+
+from lcbo.models import Booze
 
 
 class Product(models.Model):
@@ -44,3 +47,9 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('products:show', args=[self.id])
+
+    def history(self):
+        return Booze.objects.filter(product_id=self.id)
