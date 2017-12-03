@@ -21,7 +21,7 @@ class Food(models.Model):
     name = models.CharField(max_length=255, unique=True)
     description = models.TextField(default='', blank=True)
     image = models.URLField(default='', blank=True)
-    cuisine = models.ForeignKey('cuisines.Cuisine')
+    cuisine = models.ForeignKey('cuisines.Cuisine', related_name='foods')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
