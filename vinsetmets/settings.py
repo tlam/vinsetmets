@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'wines',
     'aliases',
     'products',
-    'lcbo'
+    'lcbo',
+    'cuisines',
 ]
 
 MIDDLEWARE = [
