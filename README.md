@@ -15,3 +15,4 @@ Given a type of wine, narrow down a selection based on:
 ## TODO
 
 - Food pairing
+- Given a grape varietal, group them by country/region
