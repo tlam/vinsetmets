@@ -8,9 +8,7 @@ from cuisines.models import Cuisine
 
 
 def json_data(request):
-    output = {
-        'cuisines': []
-    }
+    output = []
     cuisines = Cuisine.objects.all()
     for cuisine in cuisines:
         foods = []
@@ -20,11 +18,11 @@ def json_data(request):
                 'description': food.description,
                 'image': food.image
             })
-        output['cuisines'].append({
+        output.append({
             'id': cuisine.id,
             'name': cuisine.name,
             'origin': cuisine.origin,
             'foods': foods
         })
-    response = JsonResponse(output)
+    response = JsonResponse(output, safe=False)
     return response
