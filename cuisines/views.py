@@ -14,9 +14,10 @@ def json_data(request):
         foods = []
         for food in cuisine.foods.all():
             foods.append({
+                'id': food.id,
                 'name': food.name,
                 'description': food.description,
-                'image': food.image
+                'source': food.image
             })
         output.append({
             'id': cuisine.id,
