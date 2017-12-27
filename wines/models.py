@@ -15,7 +15,7 @@ class Style(models.Model):
 
     def __str__(self):
         return self.name
-   
+
 
 class Wine(models.Model):
     COLOUR_CHOICES = (

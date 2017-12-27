@@ -131,6 +131,6 @@ STATIC_URL = '/static/'
 LCBO_API_KEY = ''
 
 try:
-    from dev_settings import *
+    from vinsetmets.dev_settings import *
 except ImportError:
     pass

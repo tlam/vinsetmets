@@ -25,5 +25,6 @@ class WineAdmin(admin.ModelAdmin):
     ]
     list_display = ['name', 'colour', 'style']
 
+
 admin.site.register(Style, StyleAdmin)
 admin.site.register(Wine, WineAdmin)
