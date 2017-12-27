@@ -2,7 +2,6 @@
 from __future__ import unicode_literals
 
 from datetime import datetime
-import pprint
 
 from django import db
 from django.conf import settings
@@ -38,7 +37,6 @@ class Command(BaseCommand):
             for product in output['result']:
                 if product['alcohol_content'] == 0:
                     continue
-                # pprint.pprint(product)
                 obj, created = Product.objects.update_or_create(
                     id=product['id'],
                     defaults={
